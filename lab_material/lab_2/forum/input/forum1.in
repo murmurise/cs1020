@@ -1,0 +1,18 @@
+2
+stevenha
+zeulb
+3
+icpcsg
+cstentwenty
+cstwentyten
+10
+post icpcsg stevenha hello this is an introductory message
+post icpcsg dummyuser hello i am not actually here
+post nonexistentthread zeulb this should be an error
+post icpcsg zeulb hello my name is stefano
+content icpcsg 2
+post cstentwenty zeulb tutorial on linked list
+numpost zeulb
+count 2 icpcsg cstentwenty
+post icpcsg stevenha hello i am steven halim
+maxpost icpcsg
