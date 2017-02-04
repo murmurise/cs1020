@@ -1,0 +1,63 @@
+// Define Animal as an abstract class so that it cannot be instantiated.
+// It makes more sense to create real animals (cow, chicken or pig) that
+// are subclasses of Animal.
+abstract class Animal {
+  // Animal is able to make sound.
+  // This method is to be implemented by
+  // respective subclasses in appropriate ways.
+  public abstract void makeSound();
+}
+
+class Dog extends Animal {  // subclass of Animal
+  // dog sings (overriding method)
+  public void makeSound() {
+    System.out.println("Dog goes woof");
+  }
+}
+
+class Cat extends Animal {
+  // Chicken sings (overriding method)
+  public void makeSound() {
+    System.out.println("Cat goes meow");
+  }
+}
+
+class Bird extends Animal {
+  // Bird sings (overriding method)
+  public void makeSound() {
+    System.out.println("Bird goes tweet");
+  }
+}
+//
+//class Mouse extends Animal{
+//}
+public class Song{
+  
+  private Animal[] _animals;
+  private static final int ANIMAL_COUNT = 5;
+  
+  public Song(Animal a1, Animal a2,Animal a3, Animal a4, Animal a5){
+    
+    Animal[] _animals = new Animal[5];
+    _animals[0] = a1;
+    _animals[1] = a2;
+    _animals[2] = a3;
+    _animals[3] = a4;
+    _animals[4] = a5;
+    
+    
+  }
+  
+  public void dispaly(){
+    
+    for (int i = 0; i< ANIMAL_COUNT;i++)
+      System.out.println(_animal[i].makeSound());
+  }
+  
+  public static void main(String[] args){
+    Dog dog = new Dog();
+    Cat cat = new Cat();
+    Bird bird = new Bird(); 
+    (new Song(dog, cat, bird, bird, bird)).display();
+  }
+} 

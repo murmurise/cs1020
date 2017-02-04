@@ -1,0 +1,47 @@
+How to SSH with Mac OSX?
+
+Prerequisites: You must either be on campus and using the NUS/NUSOPEN networks (sign in under your NUSNET account) or you must VPN in to use the sunfire server.
+For a guide on how to VPN, see: 
+https://docs.comp.nus.edu.sg/node/1553 or 
+https://docs.comp.nus.edu.sg/node/2454 (requires SOC login)
+
+Ok, let's get started:
+1. Run terminal (search in spotlight for 'Terminal' or select 'Terminal' from the applications>utilities folder)
+2. Type <ssh userid@sunfire.comp.nus.edu.sg> (Note that this userid is you SOC account and password)
+3. Enter your password.
+4. You're in!
+
+If you are off campus, there is an alternative in the sunfire-r server. There is no need to vpn for the sunfire-r server.
+1. Run terminal (search in spotlight for 'Terminal' or select 'Terminal' from the applications>utilities folder)
+2. Type <ssh userid@sunfire-r.comp.nus.edu.sg> (Note that this userid is you SOC account and password)
+3. Enter your password.
+4. You're in!
+
+If you're prompted about a RSA key, just type yes.
+
+
+How to transfer files between Mac and sunfire?
+1. Use cyberduck
+
+2. Alternatively, you can use the command line to transfer files 
+   to and from  sunfire. 
+
+   Use the scp(Security Copy) command from you local Mac terminal. 
+   (NOTE: This is to be done without SSHing into sunfire)
+   The scp commands works like the cp command.
+
+   The format  is:
+            scp <source-path> <destination-path>
+
+   Use  -r flag after scp in case you are transferring an entire directory.
+
+   Example Usage:
+   For transferring a directory lab1 in your Downloads 
+   directory to your home directory on sunfire,
+            scp -r ~/Downloads/lab1 axxxxxx@sunfire.comp.nus.edu.sg:~/
+
+   Replace axxxxxxx with your username in sunfire.
+
+   To transfer the file back to your computer, simply invert the source and destiantion
+
+            scp -r axxxxxx@sunfire.comp.nus.edu.sg:~/lab1 ~/Downloads/

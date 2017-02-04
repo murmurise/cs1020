@@ -1,0 +1,54 @@
+/*
+ * Name  : ALex Z.
+ * Matric No. : A0157059X
+ */
+
+import java.util.*;
+
+public class Grid {
+  
+  private int[][] grid;
+  private int row;
+  private int col;
+  private int bstStgy = int[4]; 
+  // an array of size 4 containing {bombSize, xCo, yCo, score}. 
+  //The score is highest with a given grid and bomb size  
+  
+  
+  public Grid(int[][] gridIn){
+    
+    this grid = gridIn;
+    this.row = grid.length;
+    this.col = grid[0].length;
+    
+  }
+  
+  //drop the bomb and change grid configration 
+  public void dropBomb(int bbSz, int xCO, int yCo){
+    
+    for (int r = xCo- bbSz / 2; r <= xCo + bbSz / 2 && r < row && r >= 0; r++){
+      for (int c = yCo- bbSz / 2; c <= yCo + bbSz / 2 && c < col && c >= 0; c++){
+        this.grid[r][c] = 0;
+      }
+    }
+  }
+  
+  //compute score at given coordinates with a bomb size
+  public int cmptScr((int bbSz, int xCO, int yCo){
+    
+    return ;
+  }
+                     }
+                     
+                    
+                     
+                     
+                     public class Bombs {
+                       
+                       public static void main(String[] args) {
+                         
+                         
+                       }
+                       
+                       
+                     }
